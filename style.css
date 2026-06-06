@@ -232,6 +232,7 @@ canvas {
 .name-container {
   text-align: center;
   padding: 28px 48px;
+  margin-top: 160px;
   background: radial-gradient(ellipse 70% 50% at 50% 50%,
     rgba(0,0,0,0.92) 55%,
     rgba(0,0,0,0.5) 80%,
@@ -346,8 +347,11 @@ canvas {
 /* ── Download Overlay ─────────────────────────────────────── */
 .dl-overlay {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: auto;
+  top: 18px;
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
   z-index: 5000;
   width: 320px;
   background: rgba(0,4,0,0.96);
