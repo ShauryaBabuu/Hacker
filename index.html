@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SHAURYA BABU</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Scanlines overlay -->
+  <div class="scanlines"></div>
+  <!-- Screen flicker overlay -->
+  <div class="flicker"></div>
+
+  <!-- 4 Quadrant Grid -->
+  <div class="grid-wrapper">
+
+    <!-- TOP LEFT: Matrix Rain -->
+    <div class="quadrant" id="q-matrix">
+      <canvas id="matrixCanvas"></canvas>
+      <div class="quad-label">// MATRIX.FEED</div>
+    </div>
+
+    <!-- TOP RIGHT: Holographic Humanoid -->
+    <div class="quadrant" id="q-holo">
+      <canvas id="holoCanvas"></canvas>
+      <div class="quad-label">// ENTITY.SCAN</div>
+    </div>
+
+    <!-- BOTTOM LEFT: Terminal -->
+    <div class="quadrant" id="q-terminal">
+      <div class="quad-label">// SYS.TERMINAL</div>
+      <div class="terminal-body">
+        <div id="terminalOutput"></div>
+        <div class="terminal-prompt">
+          <span class="prompt-prefix">root@shadow:~# </span>
+          <span class="cursor-blink">█</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM RIGHT: Network Visualization -->
+    <div class="quadrant" id="q-network">
+      <canvas id="networkCanvas"></canvas>
+      <div class="quad-label">// NET.PULSE</div>
+    </div>
+
+  </div>
+
+  <!-- CENTER OVERLAY: Name -->
+  <div class="center-overlay">
+    <div class="name-container">
+      <div class="glitch-wrapper" data-text="SHAURYA BABU">
+        <span class="name-text" id="nameText">SHAURYA BABU</span>
+      </div>
+      <div class="name-subtitle">
+        <span class="typing-sub" id="subtitleText"></span>
+        <span class="cursor-blink-sub">|</span>
+      </div>
+      <div class="hex-bar">
+        <span id="hexStream"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download / Access Overlay -->
+  <div class="dl-overlay" id="dlOverlay">
+    <div class="dl-box">
+      <div class="dl-header">
+        <span class="dl-icon">⬇</span>
+        <span class="dl-title" id="dlTitle">INITIATING TRANSFER...</span>
+      </div>
+      <div class="dl-files" id="dlFiles"></div>
+      <div class="dl-bar-wrap">
+        <div class="dl-bar-track">
+          <div class="dl-bar-fill" id="dlBarFill"></div>
+        </div>
+        <span class="dl-pct" id="dlPct">0%</span>
+      </div>
+      <div class="dl-stats" id="dlStats">SPEED: -- KB/s &nbsp;|&nbsp; ETA: --s</div>
+    </div>
+  </div>
+
+  <!-- Access Result Flash -->
+  <div class="access-flash" id="accessFlash"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
