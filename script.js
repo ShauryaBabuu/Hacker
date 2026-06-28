@@ -12,7 +12,7 @@ const raf = requestAnimationFrame;
 // ─── 1. MATRIX RAIN ─────────────────────────────────────────
 (function initMatrix() {
   const canvas = $('matrixCanvas');
-  const ctx    = canvas.getContext('2d');
+  const ctx    = canvas.getContext('3d');
 
   const CHARS = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン0123456789ABCDEF!@#$%^&*<>[]{}|=+~';
 
